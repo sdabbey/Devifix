@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins';
+}
+
+:root{
+    --main-theme-color:#fd4100;
+}
+
+div.forms{
+    display: flex;
+}
+
+section.left{
+    background-color: var(--main-theme-color);
+    height: 100vh;
+    display: grid;
+    width: 50%;
+}
+
+section.right{
+    display: grid;
+    height: 100vh;
+    width: 50%;
+    background-color: #d9d9d9;
+}
+
+section.right ul.type{
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    height: min-content;
+}
+
+section.right ul.type li{
+    list-style: none;
+    border-radius: 2rem;
+    padding:.37rem 1.1rem;
+    font-size: .8rem;
+    margin:0 1rem;
+    background-color: #80808049;
+    color:black;
+}
+
+section.right ul.type li.active{
+    background-color: var(--main-theme-color);
+    color:white;
+}
+
+section.right form{
+    padding: 0 3rem;
+}
+
+section.right form h2.title{
+    font-weight: 400;
+    margin-bottom: 1.3rem;
+}
+
+section.right form label{
+    text-transform: uppercase;
+    font-size: .68rem;
+}
+
+section.right form label#remember{
+    font-size: .9rem;
+    margin-top: 1.54rem;
+}
+
+section.right form input{
+    border-radius: .35rem;
+    border:none;
+    outline:none;
+    padding: .9rem .8rem;
+    width: 62%;
+    margin-bottom: .34rem;
+}
+
+section.right form input[type = "checkbox"]{
+    width: fit-content;
+    margin-top: 1.54rem;
+}
+
+section.right form li{
+    display: inline-block;
+}
+
+section.right form li input{
+    width: 17vw;
+    margin-right: 1rem;
+}
+
+section.right form button,
+.verification-modal section.content button[type="submit"]{
+    border:none;
+    outline: none;
+    border-radius: .35rem;
+    padding: .9rem 0;
+    width: calc(62% + 1.6rem);
+    background-color: var(--main-theme-color);
+    margin-top: 2.5rem;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.02rem;
+}
+
+section.right form li button.send-code{
+    letter-spacing: .03rem;
+    font-size: .87rem;
+    width: 10vw;
+}
+
+section.right form ul.other-info li{
+    display: flex;
+    width: calc(62% + 1.6rem);
+    font-size: .85rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+section.right form ul.other-info li a{
+    text-decoration: none;
+    color:var(--main-theme-color)
+}
+
+.verification-modal{
+    position: absolute;
+    top:0;
+    width:100vw;
+    height: 100vh;
+    background-color: #2221203d;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    animation: slide .33s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.verification-modal section.content{
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verification-modal section.content h2{
+    font-weight: 600;
+    font-size: 1.42rem;
+    text-align: center;
+}
+
+.verification-modal section.content p{
+    text-align: center;
+    width: 70%;
+    font-size: .9rem;
+    margin:1rem 0;
+}
+
+.verification-modal section.content ul.buttons{
+    display: flex;
+}
+
+.verification-modal section.content ul.buttons li{
+    list-style: none;
+    display: inline-flex;
+    margin:0 .16rem;
+}
+
+.verification-modal section.content ul.buttons li button{
+    height: 2.5rem;
+    width: 3rem;
+    background: #ffdfd4;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    font-size: 1.09rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.verification-modal section.content button[type="submit"]{
+    margin-top: 1rem;
+}
+
+.verification-modal section.content input[type='number']{
+    border:none;
+    outline: none;
+    opacity: 0;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateY(-20rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
